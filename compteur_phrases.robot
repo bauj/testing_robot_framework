@@ -11,6 +11,7 @@ Test Nettoyage phrases
     je m'appelle Melinda      jemappelleMelinda
     -'test;test!'             testtest
     a .!?,;:-\'\""            a
+    456 a .!?,;:-\'\""         a
     ${EMPTY}                  ${EMPTY}
 
 Test Compteur voyelles
@@ -23,25 +24,28 @@ Test Compteur voyelles
     a .!?,;:-\'\""            1
     nnnbj                     0    
     àâäaéèëêeiïìoôuùy         17
+    456 a .!?,;:-\'\""        1
     ${EMPTY}                  0
     
 
 Test Compteur consonnes
     [Template]    Compteur consonnes template ${input} donne ${resultat}
     Salut!                    3
-    Sal;ut!                   3
+    Sal;ut 3 !                3
     Sal,ut!                   3
     je m'appelle Melinda      10
     -'test;test!'             6
     a .!?,;:-\'\""            0
     nnnbj                     5    
     àâäaéèëêeiïìoôuùy         0
+    456 a .!?,;:-\'\""        0
     ${EMPTY}                  0
 
 Test Compteur nombre mots
     [Template]    Compteur nb mots template ${input} donne ${resultat}
     Salut!                    1
     Sal;ut!                   1
+    Sal;ut 3 !                2
     je m'appelle Melinda      3
     a .!?,;:-\'\""            1
     nnnbj                     1    
@@ -49,6 +53,7 @@ Test Compteur nombre mots
     Nous faisons des tests    4
     Je sais pas               3
     Salut Gilles !            2
+    456 a .!?,;:-\'\""        2
     ${EMPTY}                  0
     
 *** Keywords ***

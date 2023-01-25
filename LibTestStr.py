@@ -3,7 +3,7 @@
 def clean_phrase(str1):
     # Nettoyage de la phrase
     str1.lower()
-    list_carac=list(" .!?,;:-\'\"")
+    list_carac=list(" .!?,;:-\'\"0123456789")
 
     str_cleaned=str1
     for c in list_carac:
@@ -42,7 +42,6 @@ def nombre_mots(str1):
     nb_mots   = len(list_mots)
 
     return nb_mots
-
 
 #print("> Taille de la phrase  : ", taille_phrase)
 #print("> Nombre de voyelles   : ", cpt_voy)
